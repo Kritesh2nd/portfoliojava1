@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template 0-01</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .mainbody{height:100vh;font-family:var(--fontfamily06);}
+      .mbdy1A{overflow: hidden;}
+      .mbdy1A{padding:0 50px;z-index:2;overflow:hidden;}
+      .mbody1bg1{height:100vh;width:100vw;background-color:#f00;opacity:0;z-index:1;}
+      .mbody1bg2{height:50vh;width:50vw;background-color:#000;opacity:1;z-index:1;top:-30vh;right:-30vh;transition:.7s;
+        height:0;width:0;border-radius:50%;transform-origin:center;}
+      .navtitlebox{padding:10px 0;flex-grow: 1;}
+      .navlinkbox{flex-grow: 1;}
+      .navbarsbox{display: none;}
+      .navtitle{font-size:30px;}
+      .navullist{list-style-type:none;}
+      .lis{padding:0 5px;}
+      .ahr{text-decoration: none;color: #000;padding:5px 10px;}
+      .barsbox{height:35px;width:35px;}
+      .mbdy1B{display:;z-index:1;transition:.7s;opacity:0;position: fixed;width:100vw;top:80px;}
+      .mbody2{z-index:-1;}
+      @media only screen and (max-width: 450px) {
+        .mbdy1A{padding:0 15px;}
+        /* .navtitlebox{display: none;} */
+        .navlinkbox{display: none;}
+        .lis{padding:0;}
+        .ahr{width:100%;padding:20px 0;color:#fff;}
+        .navbarsbox{display: flex;}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainbody border">
+      <div class="mbody1 flex fdc border rel">
+        <div class="mbody1bg1 abs"></div>
+        <div class="mbody1bg2 abs"></div>
+        <div class="mbdy1A flex jcsb">
+          <div class="navtitlebox">
+            <div class="navtitle">SKYARTS</div>
+          </div>
+          <div class="navlinkbox flex fdc aic jcc">
+            <ul class="navullist flex">
+              <li class="lis flex"><a href="#" class="ahr">Home</a></li>
+              <li class="lis flex"><a href="#" class="ahr">Blog</a></li>
+              <li class="lis flex"><a href="#" class="ahr">Contact</a></li>
+              <li class="lis flex"><a href="#" class="ahr">Sign In</a></li>
+            </ul>
+          </div>
+          <div class="navbarsbox flex aic">
+            <div class="barsbox border flex aic jcc">=</div>
+          </div>
+        </div>
+        <div class="mbdy1B borderb felx">
+          <ul class="navullist flex fdc border w100">
+            <li class="lis flex w100"><a href="#" class="ahr w100 flex jcc">Home</a></li>
+            <li class="lis flex w100"><a href="#" class="ahr w100 flex jcc">Blog</a></li>
+            <li class="lis flex w100"><a href="#" class="ahr w100 flex jcc">Contact</a></li>
+            <li class="lis flex w100"><a href="#" class="ahr w100 flex jcc">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mbody2 border flex">
+        container
+      </div>
+    </div>
+    <script>
+      /*
+      var mbdy1B = document.querySelector(".mbdy1B");
+      var inrgmblock = document.querySelectorAll(".inrgmblock");
+      */
+      var barsbox = document.querySelector(".barsbox");
+      var mbody1 = document.querySelector(".mbody1");
+      var mbody1bg2 = document.querySelector(".mbody1bg2");
+      var mbdy1B = document.querySelector(".mbdy1B");
+      var clickNavBars=false;
+      barsbox.addEventListener("click",()=>{
+        if(clickNavBars==false){
+          mbody1bg2.style.height = 200 + "vh";
+          mbody1bg2.style.width = 200 + "vh";
+          barsbox.style.color = "#f00";
+          mbdy1B.style.opacity = "1";
+          clickNavBars=true;
+        }else{
+          mbody1bg2.style.height = 0 + "vh";
+          mbody1bg2.style.width = 0 + "vh";
+          mbdy1B.style.opacity = "0";
+          clickNavBars=false;
+        }
+      });
+      clickNavBars();
+      function clickNavBars(){
+        
+      }
+    </script>
+    <script>
+      /*
+      var inrgmblock = document.querySelector(".inrgmblock");
+      var inrgmblock = document.querySelectorAll(".inrgmblock");
+      function boxgenerator(){
+        var lenh=100,lenw=100,lent=0,lenl=100;
+        boxx1[widthx1] = document.createElement('div');
+        boxx1[widthx1].innerHTML = "CAT";
+        boxx1[widthx1].style.height = lenh + "px";
+        boxx1[widthx1].style.width = lenw + "px";
+        boxx1[widthx1].style.border = "1px solid #000";
+        boxx1[widthx1].style.position = "absolute";
+        boxx1[widthx1].display = "flex";
+        boxx1[widthx1].justifyContent = "center";
+        boxx1[widthx1].alignItems = "center";
+        boxx1[widthx1].style.top = lent + "px";
+        boxx1[widthx1].style.left = lenl + "px";
+        boxgenerator.appendChild(boxx1[widthx1]);
+      }
+      function boxgenerator(){
+        boxx1[widthx1] = document.createElement('div');
+        boxx1[widthx1].innerHTML = "CAT";
+        boxx1[widthx1].style.height = lenh + "px";
+        boxx1[widthx1].style.width = lenw + "px";
+        boxx1[widthx1].style.border = "1px solid #000";
+        boxx1[widthx1].style.position = "absolute";
+        boxx1[widthx1].display = "flex";
+        boxx1[widthx1].justifyContent = "center";
+        boxx1[widthx1].alignItems = "center";
+        boxx1[widthx1].style.top = lent + "px";
+        boxx1[widthx1].style.left = lenl + "px";
+        boxx1[widthx1].setAttribute('class', 'boxbtn');
+        boxgenerator.appendChild(boxx1[widthx1]);
+      }
+      document.addEventListener('keydown',function(event){
+        W=87,A=65,S=83,D=68,K=75,L=76,SPACE=32,ENTER=13
+        if(event.keyCode == 87){//W
+        }
+        else if(event.keyCode == 65){//A
+        }
+      });
+      Math.random() * (max - min) + min;
+      b = Math.floor(Math.random()*(8-2)+2);
+      src="js/script.js"
+      */
+    </script>
+  </body>
+</html>
