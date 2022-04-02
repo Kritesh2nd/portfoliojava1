@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
       .mainbody{height:100vh;font-family:var(--fontfamily06);}
-      .mbdy1A{overflow: hidden;}
-      .mbdy1A{padding:0 50px;z-index:2;overflow:hidden;}
+      .mbody1{overflow: hidden;z-index: 0;}
+      .mbdy1A{padding:0 50px;z-index:2;flex-wrap: wrap;overflow:hidden;}
       .mbody1bg1{height:100vh;width:100vw;background-color:#f00;opacity:0;z-index:1;}
       .mbody1bg2{height:50vh;width:50vw;background-color:#000;opacity:1;z-index:1;top:-30vh;right:-30vh;transition:.7s;
-        height:0;width:0;border-radius:50%;transform-origin:center;}
+        height:0;width:0;border-radius:50%;transform-origin:center;position: fixed;}
       .navtitlebox{padding:10px 0;flex-grow: 1;}
       .navlinkbox{flex-grow: 1;}
       .navbarsbox{display: none;}
@@ -19,41 +19,69 @@
       .lis{padding:0 5px;}
       .ahr{text-decoration: none;color: #000;padding:5px 10px;}
       .barsbox{height:35px;width:35px;}
-      .mbdy1B{display:;z-index:1;transition:.7s;opacity:0;position: fixed;width:100vw;top:80px;}
-      .mbody2{z-index:-1;}
+      .barss{height:2px;width:100%;left:0;background: #000;transition:.35s;}
+      .bars1{top:10px;transform-origin:0 0;transform: rotateZ(0deg);animation: lol 0.35s forwards;}
+      .bars2{top:20px;opacity:1;transition:.45s;}
+      .bars3{top:31px;transform-origin:0 0;transform: rotateZ(0deg);animation: lol 0.35s forwards;}
+      @keyframes barr1A {
+        from {width:100%;transform-origin:0 0;transform: rotateZ(0);background:#000;}
+        to {width:90%;transform-origin:0 0;transform: rotateZ(45deg);background:#fff;}
+      }
+      @keyframes barr1B {
+        from {width:90%;transform-origin:0 0;transform: rotateZ(45deg);background:#fff;}
+        to {width:100%;transform-origin:0 0;transform: rotateZ(0);background:#000;}
+      }
+      @keyframes barr3A {
+        from {left:0;width:100%;transform-origin:0 0;transform: rotateZ(0);background:#000;}
+        to {left:-1px;width:90%;transform-origin:0 0;transform: rotateZ(-45deg);background:#fff;}
+      }
+      @keyframes barr3B {
+        from {left:-1px;width:90%;transform-origin:0 0;transform: rotateZ(-45deg);background:#fff;}
+        to {left:0;width:100%;transform-origin:0 0;transform: rotateZ(0);background:#000;}
+      }
+      .mbdy1B{display:;z-index:3;transition:.7s;opacity:0;position: fixed;width:100vw;top:80px;}
+      .mbody2{z-index:0;}
       @media only screen and (max-width: 450px) {
         .mbdy1A{padding:0 15px;}
         /* .navtitlebox{display: none;} */
         .navlinkbox{display: none;}
         .lis{padding:0;}
         .ahr{width:100%;padding:20px 0;color:#fff;}
-        .navbarsbox{display: flex;}
+        .navbarsbox{display: flex;display:;}
       }
     </style>
   </head>
   <body>
-    <div class="mainbody border">
-      <div class="mbody1 flex fdc border rel">
-        <div class="mbody1bg1 abs"></div>
+    <div class="mainbody">
+      <div class="mbody1 flex fdc borde rel">
+        <!-- <div class="mbody1bg1 abs">ff</div> -->
         <div class="mbody1bg2 abs"></div>
-        <div class="mbdy1A flex jcsb">
-          <div class="navtitlebox">
-            <div class="navtitle">SKYARTS</div>
+        <div class="mbdy1A  flex fdc">
+          <div class="mbdy1AA borde flex jcsb">
+            <div class="navtitlebox borde">
+              <div class="navtitle">SKYARTS</div>
+            </div>
+            <div class="navlinkbox flex fdc aic jcc">
+              <ul class="navullist flex">
+                <li class="lis flex"><a href="#" class="ahr">Home</a></li>
+                <li class="lis flex"><a href="#" class="ahr">Blog</a></li>
+                <li class="lis flex"><a href="#" class="ahr">Contact</a></li>
+                <li class="lis flex"><a href="#" class="ahr">Sign In</a></li>
+              </ul>
+            </div>
+            <div class="navbarsbox borde flex aic">
+              <div class="barsbox borde flex aic jcc rel">
+                <span class="bars1 barss abs"></span>
+                <span class="bars2 barss abs"></span>
+                <span class="bars3 barss abs"></span>
+              </div>
+            </div>
           </div>
-          <div class="navlinkbox flex fdc aic jcc">
-            <ul class="navullist flex">
-              <li class="lis flex"><a href="#" class="ahr">Home</a></li>
-              <li class="lis flex"><a href="#" class="ahr">Blog</a></li>
-              <li class="lis flex"><a href="#" class="ahr">Contact</a></li>
-              <li class="lis flex"><a href="#" class="ahr">Sign In</a></li>
-            </ul>
-          </div>
-          <div class="navbarsbox flex aic">
-            <div class="barsbox border flex aic jcc">=</div>
-          </div>
+          <div class="mbdy1AB borde"></div>
+          
         </div>
-        <div class="mbdy1B borderb felx">
-          <ul class="navullist flex fdc border w100">
+        <div class="mbdy1B borde felx">
+          <ul class="navullist flex fdc borde w100">
             <li class="lis flex w100"><a href="#" class="ahr w100 flex jcc">Home</a></li>
             <li class="lis flex w100"><a href="#" class="ahr w100 flex jcc">Blog</a></li>
             <li class="lis flex w100"><a href="#" class="ahr w100 flex jcc">Contact</a></li>
@@ -61,31 +89,50 @@
           </ul>
         </div>
       </div>
-      <div class="mbody2 border flex">
-        container
+      <div class="mbody2 borde flex">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur ut, perspiciatis doloremque quis tempora, praesentium in fugiat at cupiditate suscipit quia harum quo deserunt maiores iure. Debitis, natus consectetur?
       </div>
     </div>
     <script>
       /*
-      var mbdy1B = document.querySelector(".mbdy1B");
+      var mbdy1A = document.querySelector(".mbdy1A");
       var inrgmblock = document.querySelectorAll(".inrgmblock");
       */
       var barsbox = document.querySelector(".barsbox");
+      var barss = document.querySelectorAll(".barss");
       var mbody1 = document.querySelector(".mbody1");
+      var mbody2 = document.querySelector(".mbody2");
+      var mbody1bg1 = document.querySelector(".mbody1bg1");
       var mbody1bg2 = document.querySelector(".mbody1bg2");
+      var mbdy1A = document.querySelector(".mbdy1A");
       var mbdy1B = document.querySelector(".mbdy1B");
       var clickNavBars=false;
       barsbox.addEventListener("click",()=>{
         if(clickNavBars==false){
+          mbody2.style.display = "none";
           mbody1bg2.style.height = 200 + "vh";
           mbody1bg2.style.width = 200 + "vh";
-          barsbox.style.color = "#f00";
+          barsbox.style.color = "#ff0";
+          mbdy1A.style.height = 100 + "vh";
+          mbdy1B.style.transition = "0.7s";
           mbdy1B.style.opacity = "1";
+          mbdy1B.style.display = "flex";
+          
+          barss[0].style.animationName = "barr1A";
+          barss[1].style.opacity = "0";
+          barss[2].style.animationName = "barr3A";
           clickNavBars=true;
         }else{
+          mbody2.style.display = "flex";
           mbody1bg2.style.height = 0 + "vh";
           mbody1bg2.style.width = 0 + "vh";
+          mbdy1A.style.height = "auto";
           mbdy1B.style.opacity = "0";
+          
+          barss[0].style.animationName = "barr1B";
+          barss[1].style.opacity = "1";
+          barss[2].style.animationName = "barr3B";
+          setTimeout(() => {mbdy1B.style.display = "none"}, 700);
           clickNavBars=false;
         }
       });
