@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Template 0-01</title>
+    <title>Portfolio Java | Kritesh Thapa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <style>
-      .mainbody{height:100vh;font-family:var(--fontfamily06);}
-      .mbody1{overflow: hidden;z-index: 0;}
+      .mainbody{height:500vh;font-family:var(--fontfamily06);}
+      .mbody1{overflow: hidden;z-index: 0;position: fixed;width:100%;background-color: #fff;transition:.3s;
+        animation: lol 0.35s forwards;}
+      @keyframes navbodyA {
+        from{margin-top:0;}
+        to{margin-top:-60px;}
+      }
+      @keyframes navbodyB {
+        from{margin-top:-60px;}
+        to{margin-top:0;}
+      }
       .mbdy1A{padding:0 50px;z-index:2;flex-wrap: wrap;overflow:hidden;}
       .mbody1bg1{height:100vh;width:100vw;background-color:#f00;opacity:0;z-index:1;}
       .mbody1bg2{height:50vh;width:50vw;background-color:#000;opacity:1;z-index:1;top:-30vh;right:-30vh;transition:.7s;
@@ -21,7 +30,7 @@
       .barsbox{height:35px;width:35px;}
       .barss{height:2px;width:100%;left:0;background: #000;transition:.35s;}
       .bars1{top:10px;transform-origin:0 0;transform: rotateZ(0deg);animation: lol 0.35s forwards;}
-      .bars2{top:20px;opacity:1;transition:.45s;}
+      .bars2{top:20px;opacity:1;transition:.25s;}
       .bars3{top:31px;transform-origin:0 0;transform: rotateZ(0deg);animation: lol 0.35s forwards;}
       @keyframes barr1A {
         from {width:100%;transform-origin:0 0;transform: rotateZ(0);background:#000;}
@@ -40,7 +49,7 @@
         to {left:0;width:100%;transform-origin:0 0;transform: rotateZ(0);background:#000;}
       }
       .mbdy1B{display:;z-index:3;transition:.7s;opacity:0;position: fixed;width:100vw;top:80px;}
-      .mbody2{z-index:0;}
+      .mbody2{z-index:0;padding-top:60px;}
       @media only screen and (max-width: 450px) {
         .mbdy1A{padding:0 15px;}
         /* .navtitlebox{display: none;} */
@@ -89,7 +98,7 @@
           </ul>
         </div>
       </div>
-      <div class="mbody2 borde flex">
+      <div class="mbody2 border flex">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tenetur ut, perspiciatis doloremque quis tempora, praesentium in fugiat at cupiditate suscipit quia harum quo deserunt maiores iure. Debitis, natus consectetur?
       </div>
     </div>
@@ -139,6 +148,31 @@
       clickNavBars();
       function clickNavBars(){
         
+      }
+    </script>
+    <script>
+      /*
+      var mbody1 = document.querySelector(".mbody1");
+      var inrgmblock = document.querySelectorAll(".inrgmblock");
+      */
+      window.onscroll = function(e) {
+        let scroll = this.scrollY;
+        console.log(scroll);
+        if(scroll > 200){
+          mbody1.style.boxShadow = "1px 0 6px rgba(0,0,0,.5)";
+        }
+        else{
+          mbody1.style.boxShadow = "1px 0 6px rgba(0,0,0,0)";
+        }
+        if(this.oldScroll < this.scrollY && scroll > 600){
+          // mbody1.style.display = "none";
+          mbody1.style.animationName = "navbodyA";
+        }
+        else if(this.oldScroll > this.scrollY){
+          // mbody1.style.display = "flex";
+          mbody1.style.animationName = "navbodyB";
+        }
+        this.oldScroll = this.scrollY;
       }
     </script>
     <script>
