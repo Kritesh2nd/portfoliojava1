@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio Java | Kritesh Thapa</title>
+    <title>Portfolio Java | Sign In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <style>
-      .mainbody{height:500vh;font-family:var(--fontfamily06);}
+      .mainbody{height:100vh;font-family:var(--fontfamily06);}
       .mbody1{overflow: hidden;z-index: 0;position: fixed;width:100%;background-color: #fff;transition:.3s;
         animation: lol 0.35s forwards;}
       @keyframes navbodyA {
@@ -65,55 +65,22 @@
       .r1box1{width:60%;}
       .r1box2{width:40%;z-index:-1;}
       /* =============================================== room1 =============================================== */
-      .r1box1{left:72%;top:0px;animation:room1_ 1.3s forwards linear;}
-      /* .r1box1{left:72%;top:0px;animation:room1_ 0s forwards linear;} */
-      .r1txtbox1{padding:165px 0 0 0;font-size:65px;font-weight:300;}
-      .r1txt1{font-size:65px;font-weight:300;overflow:hidden;width:10px;animation:r1txt1_ 1.7s forwards linear 1.3s;background:#fff;}
-      /* .r1txt1{font-size:65px;font-weight:300px;overflow:hidden;width:10px;animation:r1txt1_ 0s forwards linear 0s;background:#fff;} */
-      .r1txt1A{width:900px;font-size:65px;font-weight:300;}
-      /* .r1txt1::before{animation:befroom1_ 5.5s forwards;} */
-      .r1txtbox2{margin-top:0px;z-index:-1;max-height:200px;overflow:hidden;}
-      .r1txt2{height:0px;overflow:hidden;animation:r1txtbox2_ 2s forwards linear 3s;}
-      /* .r1txt2{height:0px;overflow:hidden;animation:r1txtbox2_ 0s forwards linear 0s;} */
-      .r1txt2A{font-size:30px;font-weight: 300;line-height:45px;padding:35px 0 50px 0;}
-      .r1box2{left:60%;top:0%;padding:0 60px;}
-      @keyframes room1_ {
-        0%{left:72%;top:0px;}
-        30%{left:72%;top:0px;}
-        100%{left:0%;top:0px;}
-      }
-      @keyframes r1txt1_ {
-        0%{width:10px;}
-        95%{width:500px;}
-        100%{width:100%;}
-      }
-      @keyframes r1txtbox2_ {
-        0%{height:0px;}
-        100%{height:200px;}
-      }
-      .r1btnbox{cursor: pointer;}
-      .r1Prjbtns{font-size:30px;font-weight:300;margin:10px 0 0 10px;padding:8px 35px;}
-      .r1PrjbtnA{background:#f00;color:rgba(0,0,0,0);cursor: pointer;}
-      .r1PrjbtnB{cursor:pointer;transition:.3s;background:#f0f;margin:0;top:10px;left:10px;}
-      .r1PrjbtnB:hover{top:0px;left:0px;}
-      @media only screen and (max-width: 450px) {
-        .rooms{padding:0 15px;}
-        .iroom1{display:flex;flex-direction: column;}
-        .rboxes{width:100%;height:50%;}
-        .r1box2{left:0%;top:0%;padding:0 60px;position: relative;}
-        .r1box1{left:90%;top:0px;animation:room1_ 1.3s forwards linear;}
-        .r1txtbox1{padding:130px 0 0 0;}
-        .r1txt1{font-size:40px;font-weight:300;width:7px;}
-        .r1txt1A{width:100vw;}
-        .r1txtbox2{max-height:160px;}
-        .r1txt2A{font-size:20px;font-weight: 300;line-height:26px;padding:25px 0 30px 0;}
-        .r1box2{left:60%;top:0%;padding:0 60px;}
-        @keyframes room1_ {
-          0%{left:90%;top:0px;}
-          30%{left:90%;top:0px;}
-          100%{left:0%;top:0px;}
-        }
-      }
+      
+      .mbody2{height:calc(100vh - 110px);padding-top:140px;}
+      .loginbox{padding:30px 25px;border-radius:3px;}
+      .formtitle{font-size:30px;font-weight:500;text-align: center;padding:10px 0;}
+      .formtxt0{padding:14px 0 8px 0;font-size:18px;}
+      .inputbox0{padding:5px 8px;font-family:var(--fontfamily05);font-size:16px;border-radius:3px;width:300px;}
+
+      .formtxt3{padding:10px 0;text-align: center;}
+      .iformtxt3{font-size:15px;text-decoration:underline;cursor: pointer;}
+      .loginbtnbox{padding-top:20px;}
+      .loginbtn{padding:8px 0px;font-size:20px;text-align: center;border-radius:3px;font-weight:500;background:#a8a8a8;
+        border:1px solid #777;cursor: pointer;width:100%;}
+
+      .signinbtnbox{padding-top:15px;}
+      .signinbtn{padding:8px 0px;font-size:20px;text-align: center;border-radius:3px;font-weight:500;color:#000;
+        border:1px solid #777;cursor: pointer;width:100%;text-decoration: none;}
     </style>
   </head>
   <body>
@@ -131,7 +98,7 @@
                 <li class="lis flex"><a href="index.html" class="ahr">Home</a></li>
                 <li class="lis flex"><a href="#" class="ahr">Blog</a></li>
                 <li class="lis flex"><a href="#" class="ahr">Contact</a></li>
-                <li class="lis flex"><a href="signin.html" class="ahr">Sign In</a></li>
+                <li class="lis flex"><a href="sigin.html" class="ahr">Sign In</a></li>
               </ul>
             </div>
             <div class="navbarsbox borde flex aic">
@@ -154,38 +121,60 @@
           </ul>
         </div>
       </div>
-      <div class="mbody2 borde flex fdc">
-        <div class="imbody borde flex fdc">
-          <div class="room1 rooms borde">
-            <div class="iroom1 irooms border inr flex">
-              <div class="r1box1 r1boxes1 rboxes abs borderr flex">
-                <div class="inr">
-                  <div class="r1txtbox1 borde rel">
-                    <div class="r1txt1 borde">
-                      <div class="r1txt1A borde">
-                        Hey, I'm Kritesh.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="r1txtbox2 borde rel">
-                    <div class="r1txt2 border">
-                      <div class="r1txt2A borde">
-                        A web designer and developer from Lalitpur in the Nepal. I create bespoke websites to help people go further online.  
-                      </div>
-                    </div>
-                  </div>
-                  <div class="r1btnbox borderr flex rel">
-                    
-                    <div class="r1PrjbtnA r1Prjbtns border">ProjectA</div>
-                    <div class="r1PrjbtnB r1Prjbtns border abs">ProjectB</div>
-                  </div>
-                </div>
-              </div>
-              <div class="r1box2 r1boxes2 rboxes abs borderb flex jcc aic none">
-                <img src="image/laptop.png" alt="" class="r1img w100">
-              </div>
+      <div class="mbody2 borde flex jcc aic">
+        <div class="loginbox border">
+          <form action="login1.jsp" method="POST">
+            <div class="formtitle">Log In</div>
+            <div class="formtxt1 formtxt0">User Id / Email</div>
+            <input type="text" class="inputbox1 inputbox0 border" name="userid">
+            <div class="formtxt2 formtxt0">Password</div>
+            <input type="text" class="inputbox2 inputbox0 border" name="userpass">
+            <div class="formtxt1 formtxt0">
+              <!-- <%
+                  String inputid = request.getParameter("userid");
+                  String inputpass = request.getParameter("userpass");
+//                    out.print("user id/email "+paramValue);
+//                    out.print(" & user pass "+paramValuee);
+              %>
+              <%
+                  
+                  try{
+                  int usrid=5;
+                  String usrname="";
+                  String usrpass="";
+                  Class.forName("com.mysql.jdbc.Driver");  
+                  connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+                  statement=connection.createStatement();
+                  String sql ="select * from userlogin";
+                  resultSet = statement.executeQuery(sql);
+                  while(resultSet.next()){
+                      usrid = resultSet.getInt("id");
+                      usrname = resultSet.getString("uname");
+                      usrpass = resultSet.getString("upass");
+                  
+                  }
+//                    System.out.println("bool "+usrname.equals("admin"));
+                  if(inputid.equals(usrname) && inputpass.equals(usrpass)){
+                      out.print("Login Sucess!!");
+                  }else{
+                      out.print("Login Failed!!");
+                  }
+                  connection.close();
+                  }catch(Exception ex) {
+                      System.out.println(ex.toString());
+                  }
+              %> -->
             </div>
-          </div>
+            <div class="loginbtnbox">
+              <input type = "submit" class="loginbtn" value = "Log In" />
+            </div>
+            <div class="signinbtnbox flex">
+              <a href="#" class="signinbtn border">Sign In</a>
+            </div>
+            <div class="formtxt3 formtxt0 flex jcc aic">
+                <div class="iformtxt3">Forget Password?</div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
